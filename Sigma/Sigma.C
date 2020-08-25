@@ -73,7 +73,7 @@ void Sigma<BasicTurbulenceModel>::correctNut()
          }
       }
 
-      if(sigma_1<1.e-16) zeroSigma = true;
+      if(abs(sigma_1)<1.e-16) zeroSigma = true;
 
       DsgCells[celli] = sigma_3*(sigma_1-sigma_2)*(sigma_2-sigma_3)
                         /sqr(sigma_1+1.e-16);
