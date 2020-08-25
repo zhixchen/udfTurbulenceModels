@@ -10,7 +10,7 @@
   
   * Add the following line into your 'controlDict':
   
-    `libs ("libudfTurbulenceModels.so")`
+    `libs ( "libudfTurbulenceModels.so" )`
     
   * In 'constant/turbulenceProperties', e.g. for Sigma model, set:
   
