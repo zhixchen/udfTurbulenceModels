@@ -36,7 +36,15 @@ Description
 
     The makeTurbulentFluidThermoModels.C file has been updated for OpenFOAM version 6, Eric Daymo, eadaymo@tonkomo.com 
 
-    Updated and validated for OpenFOAM version 7, James C. Massey, jcm97@cam.ac.uk
+    Updated and validated for OpenFOAM version 7, James C. Massey, jcm97@cam.ac.uk, University of Cambridge
+
+    The default model coefficients are
+    \verbatim
+        dynamicSmagorinskyCoeffs
+        {
+            filter      simple;
+        }
+    \endverbatim
 
 SourceFiles
     dynamicSmagorinsky.C
