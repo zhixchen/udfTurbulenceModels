@@ -40,7 +40,8 @@ Description
     \verbatim
         SigmaCoeffs
         {
-            Csg                  1.5;
+            filter   simple;
+            Csg      1.5;
         }
     \endverbatim
 
