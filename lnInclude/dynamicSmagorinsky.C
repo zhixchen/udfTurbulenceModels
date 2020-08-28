@@ -1,1 +1,0 @@
-../dynamicSmagorinsky/dynamicSmagorinsky.C
