@@ -73,10 +73,10 @@ void Sigma<BasicTurbulenceModel>::correctNut()
          }
       }
 
-      if(abs(sigma_1)<1.e-16) zeroSigma = true;
+      if(abs(sigma_1)<ROOTVSMALL && !zeroSigma) zeroSigma = true;
 
       DsgCells[celli] = sigma_3*(sigma_1-sigma_2)*(sigma_2-sigma_3)
-                        /sqr(sigma_1+1.e-16);
+                        /(sqr(sigma_1)+VSMALL);
    }
 
    if(zeroSigma) WarningInFunction << "Zero sigma_1 value!!!" << endl;
@@ -87,8 +87,6 @@ void Sigma<BasicTurbulenceModel>::correctNut()
 
    BasicTurbulenceModel::correctNut();
 }
-
-
 
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
