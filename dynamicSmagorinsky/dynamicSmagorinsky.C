@@ -182,10 +182,12 @@ void dynamicSmagorinsky<BasicTurbulenceModel>::correct()
     volScalarField MMMM = fvc::average(magSqr(MM));
     MMMM.max(VSMALL);
 
+//  J.C. Massey - computed Cs here is the Smagorinsky constant squared to allow for backscatter.
+//  If plotting a histogram of the Smagorinsky constant, square root this Cs.
     Cs_= 0.5* fvc::average(LL && MM)/MMMM;
 
 
-// J.C. Massey - Below is removed for calculation of k
+//  J.C. Massey - Below is removed for calculation of k
 //    volScalarField KK =
 //    0.5*(filter_(magSqr(U)) - magSqr(filter_(U)));
     
